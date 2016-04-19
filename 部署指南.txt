@@ -1,0 +1,3 @@
+如何支持disqus
+- 在settings.json中配置disqus.shortname。参考disqus
+

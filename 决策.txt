@@ -1,0 +1,10 @@
+使用mantra架构
+使用bootstrap(react-bootstrap)
+以768为界，向上优化(sm, md, lg)，向下兼容(xs)
+定义methods和publications时，所有参数使用一个object封装
+component负责表现，action负责动作（业务逻辑），container负责连接适配与数据获取
+表单等频繁操作的组件，自己管理内部状态（如果每一个动作都与应用状态同步，由于中间各个环节的岔子，可能出现闪烁、编辑中断等问题，现在react-komposer就有该问题）
+state-actions-container作为一种模式，不一定要在app级别应用，在可以简化处理的地方，可以自建container，此时container要负责state和actions
+container，可以只用react组件做状态控制，或只用compose组件做数据获取，也可以同时使用，此时，react组件包在外层
+routes排序，越具体越靠前，越长越靠前
+组件可复用的功能尽量抽象为高阶组件builder

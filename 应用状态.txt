@@ -1,0 +1,19 @@
+应用状态包含：app-state, app-data, local-state, user-state
+
+app-state
+- app-state是所有应用的公共状态
+- 仅包含少量全局、设置类状态，实时全同步
+
+app-data
+- 类似于app-state，在所有应用中共享
+- 仅包含局限在应用某处使用的数据
+- 数据量可以比较大
+- 需要时单独拉取
+
+local-state
+- local-state是当前客户端的状态
+- 部分数据可能持久化到本地
+
+user-state
+- user-state是当前用户的状态
+- 所有数据都需要持久化到服务端

@@ -1,0 +1,12 @@
+meteor加载顺序：cdn - meteor package - app(local file, npm)
+
+参考
+- 优先使用npm
+- 尽量不使用meteor package（正在逐步被淘汰）
+- 不使用cdn（健壮性不强，无公网无法使用，全局污染）
+- 尽量不要使用local file，除非无能为力
+
+如何使用npm
+- 工具库直接导入、使用即可
+- 全局类库、框架代码，在configs目录中编写初始化代码，在main.js中执行初始化，注意加载顺序
+- css文件和静态文件（比如字体）现在还无法直接引入，只能复制到项目（静态文件复制到public目录）
